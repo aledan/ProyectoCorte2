@@ -1,0 +1,466 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>Panel de Control</title>
+		<link href="../Css/Registro_Admin.css" rel="stylesheet" />
+		<script type="text/javascript" src="../jquerys/jquery.js"></script>
+		<meta charset="utf8">
+		<script type="text/javascript" src="../Script/ScriptAdministrador.js"></script>
+		<script type="text/javascript" src="../jquerys/Funciones.js"></script>
+	</head>
+
+	<body onload="Administrador()">
+		<!--____________________________________________________________________________ADMINISTRADORD______________________-->
+		<!-- Dar de alta-->
+		<div id="Fondo_Modal" >
+			<div id="Contenido_Modal">
+				<div id="Cerrar"><img id="img_Cerrar" src="../Imagenes/cerrar.png" onclick="Limpiar();"></div>
+					<div id="ContAdministrador">
+						<h1 class="Titulos_Mod" id="Titulo-Adminitrador">Registrar Administrador</h1>
+						<table class="TablasFormulario" id="Tabla_Formulario">
+	    						<tr>
+	    							<td class="Labels" >Clave</td>
+	    								<td ><input Class="CajasT" type="text" readonly="readonly" id="AdminitradorClave" onkeypress="ValidaSoloNumeros();" placeholder="Clave"></td>
+	    						</tr>
+	    						<tr>
+	    							<td class="Labels">Nombre</td>
+									<td ><input Class="CajasT" type="text" id="AdminitradorNombre"  onkeypress="ValidaSoloLetras();"  placeholder="Nombre"></td>
+								</tr>
+	    						<tr>
+									<td class="Labels">Apellido</td>
+									<td ><input Class="CajasT" type="text" id="AdminitradorApellido" onkeypress="ValidaSoloLetras();"  placeholder="Apellido"></td>
+	    						</tr>
+	    						<tr>
+									<td class="Labels">Sexo</td>
+									<td >
+										<select id="ComboSexo" >
+										  <option value="Hombre">Hombre</option>
+										  <option></option>on value="Mujer">Mujer</option>
+										</select>
+
+									</td>
+	    						</tr>
+	       						<tr>
+									<td class="Labels">Usuario</td>
+									<td ><input Class="CajasT" type="text"  id="AdminitradorUsuario"  placeholder="Usuario"></td>
+	    						</tr>
+	       						<tr>
+									<td class="Labels">Password</td>
+									<td ><input Class="CajasT" type="password"  id="AdministradorContra1"  placeholder="Password"></td>
+	    						</tr>
+	       						<tr>
+									<td class="Labels">Password</td>
+									<td ><input Class="CajasT" type="password"  id="AdministradorContra2"  placeholder="Password" onblur ="AdministradoresContraseñas();"></td>
+	    						</tr>
+	    						<tr>
+									<td ><img class="Botones" id="BotonAdminGuardar" src ="../Imagenes/red_save.png" onclick="ComprobandoCamposAdministrador();"></td>
+									<td ><img id="BotonRegresar" class="Botones" onclick="Limpiar();" src="../Imagenes/return.png"></td>
+	    						</tr>
+	       				</table>
+
+	       				<table class="TablasFormulario" id="FormularioFoto">
+	       					<tr>
+	       						<td colspan="2">
+	       							<img id="ImagenAdministrador" class="Fotografia" name="imagen" src="../Imagenes/Default.png">
+	       						</td>
+	       					</tr>
+	       					<tr>	
+	       						<td >
+	       							<form method="post" name="archivo" enctype="multipart/form-data" action="miServlet"> 
+		       							<input id="InputPanelControl" class="InputReal" type="file" onchange=""/>
+		       							<button class="BotonSimulado">Examinar</button>
+		       						</form>
+	       						</td>
+	       						<td>
+	       							<button>Camara</button>
+	       						</td>
+	       					</tr>
+	       				
+	       				</table>
+					</div>
+
+					<!--Dar de baja-->
+					<div id="ContAdministradorBaja">
+						<h1 class="Titulos_Mod" id="Titulo-Adminitrador">Eliminar Administrador</h1>
+						<table class="TablasFormulario" id="Tabla_Formulario">
+	    						<tr>
+	    								<td class="Labels" >Clave</td>
+	    								<td ><input Class="CajasT" type="text" id="AdminitradorClave" onkeypress="ValidaSoloNumeros();" placeholder="Clave"></td>
+	    								<td><img id="BotonBuscar" class="BotonSearch" src="../Imagenes/search.png"></td>
+	    						</tr>
+	    						<tr>
+	    							<td class="Labels">Nombre</td>
+									<td ><input Class="CajasT" type="text" id="AdminitradorNombre"  onkeypress="ValidaSoloLetras();"  placeholder="Nombre"></td>
+								</tr>
+	    						<tr>
+									<td class="Labels">Apellido</td>
+									<td ><input Class="CajasT" type="text" id="AdminitradorApellido" onkeypress="ValidaSoloLetras();"  placeholder="Apellido"></td>
+	    						</tr>
+	    						<tr>
+									<td class="Labels">Sexo</td>
+									<td >
+										<select id="ComboSexo" >
+										  <option value="Hombre">Hombre</option>
+										  <option></option>on value="Mujer">Mujer</option>
+										</select>
+
+									</td>
+	    						</tr>
+	       						<tr>
+									<td class="Labels">Usuario</td>
+									<td ><input Class="CajasT" type="text"  id="AdminitradorUsuario"  placeholder="Usuario"></td>
+	    						</tr>
+	       						<tr>
+									<td class="Labels">Password</td>
+									<td ><input Class="CajasT" type="password"  id="AdministradorContra1"  placeholder="Password"></td>
+	    						</tr>
+	       						<tr>
+									<td class="Labels">Password</td>
+									<td ><input Class="CajasT" type="password"  id="AdministradorContra2"  placeholder="Password" onblur ="AdministradoresContraseñas();"></td>
+	    						</tr>
+	    						<tr>
+									<td ><img class="Botones" id="BotonAdminGuardar" src ="../Imagenes/red_save.png" onclick="ComprobandoCamposAdministrador();"></td>
+									<td ><img id="BotonRegresar" class="Botones" onclick="Limpiar();" src="../Imagenes/return.png"></td>
+	    						</tr>
+	       				</table>
+
+	       				<table class="TablasFormulario" id="FormularioFoto">
+	       					<tr>
+	       						<td colspan="2">
+	       							<img id="ImagenEliminarVendedores" class="Fotografia" name="imagen" src="../Imagenes/Default.png">
+	       						</td>
+	       					</tr>
+	       				</table>
+					</div>
+
+					<!--Cambiar -->
+						<div id="ContAdministradorCambio">
+						<h1 class="Titulos_Mod" id="Titulo-Adminitrador">Editar Administrador</h1>
+						<table class="TablasFormulario" id="Tabla_Formulario">
+	    						<tr>
+	    								<td class="Labels" >Clave</td>
+	    								<td ><input Class="CajasT" type="text" id="AdminitradorClave" onkeypress="ValidaSoloNumeros();" placeholder="Clave"></td>
+	    								<td><img id="BotonBuscar" class="BotonSearch" src="../Imagenes/search.png"></td>
+	    						</tr>
+	    						<tr>
+	    							<td class="Labels">Nombre</td>
+									<td ><input Class="CajasT" type="text" id="AdminitradorNombre"  onkeypress="ValidaSoloLetras();"  placeholder="Nombre"></td>
+								</tr>
+	    						<tr>
+									<td class="Labels">Apellido</td>
+									<td ><input Class="CajasT" type="text" id="AdminitradorApellido" onkeypress="ValidaSoloLetras();"  placeholder="Apellido"></td>
+	    						</tr>
+	    						<tr>
+									<td class="Labels">Sexo</td>
+									<td >
+										<select id="ComboSexo" >
+										  <option value="Hombre">Hombre</option>
+										  <option></option>on value="Mujer">Mujer</option>
+										</select>
+
+									</td>
+	    						</tr>
+	       						<tr>
+									<td class="Labels">Usuario</td>
+									<td ><input Class="CajasT" type="text"  id="AdminitradorUsuario"  placeholder="Usuario"></td>
+	    						</tr>
+	       						<tr>
+									<td class="Labels">Password</td>
+									<td ><input Class="CajasT" type="password"  id="AdministradorContra1"  placeholder="Password"></td>
+	    						</tr>
+	       						<tr>
+									<td class="Labels">Password</td>
+									<td ><input Class="CajasT" type="password"  id="AdministradorContra2"  placeholder="Password" onblur ="AdministradoresContraseñas();"></td>
+	    						</tr>
+	    						<tr>
+									<td ><img class="Botones" id="BotonAdminGuardar" src ="../Imagenes/red_save.png" onclick="ComprobandoCamposAdministrador();"></td>
+									<td ><img id="BotonRegresar" class="Botones" onclick="Limpiar();" src="../Imagenes/return.png"></td>
+	    						</tr>
+	       				</table>
+
+	       				<table class="TablasFormulario" id="FormularioFoto">
+	       					<tr>
+	       						<td colspan="2">
+	       							<img id="ImagenEliminarVendedores" class="Fotografia" name="imagen" src="../Imagenes/Default.png">
+	       						</td>
+	       					</tr>
+	       				</table>
+					</div>
+
+
+<!-- ____________________________________________________________VENDEDORES____________________________________________________-->
+
+					<div id="ContVendedor">
+						<h1 class="Titulos_Mod" id="Titulo-Vendedor">Registrar Vendedor</h1>
+						<table id="Tabla_Formulario">
+	    						<tr>
+	    							<td class="Labels">Clave</td>
+	    							<td ><input Class="CajasT" type="text" id="VendedorClave" placeholder="Clave"></td>
+	    						</tr>
+	    						<tr>
+	    							<td class="Labels">Nombre</td>
+									<td ><input Class="CajasT" type="text"  id="VendedorNombre"  placeholder="Nombre"></td>
+								</tr>
+	    						<tr>
+									<td class="Labels">Apellido</td>
+									<td ><input Class="CajasT" type="text" id="VendedorApellido"   placeholder="Apellido"></td>
+	    						</tr>
+	    						<tr>
+									<td class="Labels">Sexo</td>
+									<td >
+										<select id="ComboSexo">
+										  <option value="Hombre">Hombre</option>
+										  <option value="Mujer">Mujer</option>
+										</select>
+
+									</td>
+	    						</tr>
+	       						<tr>
+									<td class="Labels">Usuario</td>
+									<td ><input Class="CajasT" type="text" id="VendedorUsuario"   placeholder="Usuario"></td>
+	    						</tr>
+	       						<tr>
+									<td class="Labels">Password</td>
+									<td ><input Class="CajasT" type="password" id="VendedorContra1"   placeholder="Password" ></td>
+	    						</tr>
+	    						<tr>
+									<td class="Labels">Password</td>
+									<td ><input Class="CajasT" type="password" id="VendedorContra2"   placeholder="Password" onblur ="VendedoresContraseñas();"></td>
+	    						</tr>
+	    						<tr>
+									<td ><img class="Botones"  src="../Imagenes/red_save.png" onclick="ComprobandoCamposVendedores();"></td>
+									<td ><img class="Botones" src="../Imagenes/return.png"></td>
+	    						</tr>
+	       				</table>
+
+	       				<table class="TablasFormulario" id="FotoVendedor">
+	       					<tr>
+	       						<td colspan="2">
+	       							<img id="ImagenAdministrador" class="Fotografia" name="imagen" src="../Imagenes/Default.png">
+	       						</td>
+	       					</tr>
+	       					<tr>	
+	       						<td >
+	       							<form method="post" name="archivo" enctype="multipart/form-data"  action="miServlet"> 
+		       							<input id="InputPanelControl" class="InputReal" type="file" onchange=""/>
+		       							<button class="BotonSimulado">Examinar</button>
+		       						</form>
+	       						</td>
+	       						<td>
+	       							<button>Camara</button>
+	       						</td>
+	       					</tr>
+	       				</table>
+					</div>
+
+<!-- ______________________________________ELIMINAR VENDEDORES__________________________________________________________________________ -->					
+					<div id="ContVendedorEliminar">
+						<h1 class="Titulos_Mod" id="Titulo-Vendedor">Eliminar Vendedor</h1>
+						<table id="Tabla_Formulario">
+	    						<tr>
+	    							<td class="Labels">Clave</td>
+	    							<td ><input Class="CajasT" type="text" id="VendedorClave" placeholder="Clave"></td>
+	    							<td><img id="BotonBuscar" class="BotonSearch" src="../Imagenes/search.png"></td>
+	    						</tr>
+	    						<tr>
+	    							<td class="Labels">Nombre</td>
+									<td ><input Class="CajasT" type="text"  id="VendedorNombre"  placeholder="Nombre"></td>
+								</tr>
+	    						<tr>
+									<td class="Labels">Apellido</td>
+									<td ><input Class="CajasT" type="text" id="VendedorApellido"   placeholder="Apellido"></td>
+	    						</tr>
+	    						<tr>
+									<td class="Labels">Sexo</td>
+									<td >
+										<select id="ComboSexo">
+										  <option value="Hombre">Hombre</option>
+										  <option value="Mujer">Mujer</option>
+										</select>
+
+									</td>
+	    						</tr>
+	       						<tr>
+									<td class="Labels">Usuario</td>
+									<td ><input Class="CajasT" type="text" id="VendedorUsuario"   placeholder="Usuario"></td>
+	    						</tr>
+	       						<tr>
+									<td class="Labels">Password</td>
+									<td ><input Class="CajasT" type="password" id="VendedorContra1"   placeholder="Password" ></td>
+	    						</tr>
+	    						<tr>
+									<td class="Labels">Password</td>
+									<td ><input Class="CajasT" type="password" id="VendedorContra2"   placeholder="Password" onblur ="VendedoresContraseñas();"></td>
+	    						</tr>
+	    						<tr>
+									<td ><img class="Botones"  src="../Imagenes/red_save.png" onclick="ComprobandoCamposVendedores();"></td>
+									<td ><img class="Botones" src="../Imagenes/return.png"></td>
+	    						</tr>
+	       				</table>
+
+	       				<table class="TablasFormulario" id="FotoVendedor">
+	       					<tr>
+	       						<td colspan="2">
+	       							<img id="ImagenAdministrador" class="Fotografia" name="imagen" src="../Imagenes/Default.png">
+	       						</td>
+	       					</tr>
+	       				</table>
+					</div>
+<!--________________________________________________________CAMBIAR VENDEDORES______________________________________________________________-->
+			<div id="ContVendedorCambiar">
+						<h1 class="Titulos_Mod" id="Titulo-Vendedor">Cambiar Vendedor</h1>
+						<table id="Tabla_Formulario">
+	    						<tr>
+	    							<td class="Labels">Clave</td>
+	    							<td ><input Class="CajasT" type="text" id="VendedorClave" placeholder="Clave"></td>
+	    							<td><img id="BotonBuscar" class="BotonSearch" src="../Imagenes/search.png"></td>
+	    						</tr>
+	    						<tr>
+	    							<td class="Labels">Nombre</td>
+									<td ><input Class="CajasT" type="text"  id="VendedorNombre"  placeholder="Nombre"></td>
+								</tr>
+	    						<tr>
+									<td class="Labels">Apellido</td>
+									<td ><input Class="CajasT" type="text" id="VendedorApellido"   placeholder="Apellido"></td>
+	    						</tr>
+	    						<tr>
+									<td class="Labels">Sexo</td>
+									<td >
+										<select id="ComboSexo">
+										  <option value="Hombre">Hombre</option>
+										  <option value="Mujer">Mujer</option>
+										</select>
+
+									</td>
+	    						</tr>
+	       						<tr>
+									<td class="Labels">Usuario</td>
+									<td ><input Class="CajasT" type="text" id="VendedorUsuario"   placeholder="Usuario"></td>
+	    						</tr>
+	       						<tr>
+									<td class="Labels">Password</td>
+									<td ><input Class="CajasT" type="password" id="VendedorContra1"   placeholder="Password" ></td>
+	    						</tr>
+	    						<tr>
+									<td class="Labels">Password</td>
+									<td ><input Class="CajasT" type="password" id="VendedorContra2"   placeholder="Password" onblur ="VendedoresContraseñas();"></td>
+	    						</tr>
+	    						<tr>
+									<td ><img class="Botones"  src="../Imagenes/red_save.png" onclick="ComprobandoCamposVendedores();"></td>
+									<td ><img class="Botones" src="../Imagenes/return.png"></td>
+	    						</tr>
+	       				</table>
+
+	       				<table class="TablasFormulario" id="FotoVendedor">
+	       					<tr>
+	       						<td colspan="2">
+	       							<img id="ImagenAdministrador" class="Fotografia" name="imagen" src="../Imagenes/Default.png">
+	       						</td>
+	       					</tr>
+	       				</table>
+					</div>
+
+
+
+
+
+
+			</div>
+		</div>
+
+	
+							
+
+
+<!-- ______________________________________CONTENIDO PANEL CONTROL__________________________________________________________________________ -->
+				
+
+				<header id="HeaderPanelControl">
+					<h1>Panel de Control</h1>
+				</header>
+<!--_______________________________________________________AdministradorVentanaNoDesplegable____________________________________________-->		
+			<div id="PrincipalControl">			
+				<div id="Administrador">
+	  					<div id="Modal_int">
+	    					<div id="Contenido">
+	    						<h2 id="Titulo_RA">Administrador</h2>
+	    						<table id="Tabla_abc">
+	    							<tr>
+	    								<td ><img id="Img_boton_AAdministrador" class="Img_boton"src="../Imagenes/Altas.jpg" onclick="AutoincrementoAdministradores();"></td>
+	    								<td ><img id="Img_boton_BAdministrador" class="Img_boton" src="../Imagenes/Bajas.jpg"></td>
+	    								<td ><img id="Img_boton_CAdministrador" class="Img_boton"  src="../Imagenes/Cambios.jpg"></td>
+	    							</tr>
+	       						</table>
+	    					</div>
+	  					</div>
+				</div>
+<!--_______________________________________________________VendedoresVentanaNoDesplegable____________________________________________-->
+				<div id="Vendedores">
+	  					<div id="Modal_int">
+	    					<div id="Contenido">
+	    						<h2 id="Titulo_RA">Vendedores</h2>
+	    						<table id="Tabla_abc">
+	    							<tr>
+	    								<td ><img id="Img_boton_AVendedores" class="Img_boton"src="../Imagenes/Altas.jpg" ></td>
+	    								<td ><img id="Img_boton_BVendedores" class="Img_boton" src="../Imagenes/Bajas.jpg"></td>
+	    								<td ><img id="Img_boton_CVendedores" class="Img_boton"  src="../Imagenes/Cambios.jpg"></td>
+	    							</tr>
+	       						</table>
+	    					</div>
+	  					</div>
+				</div>			
+<!--_______________________________________________________ClientesVentanaNoDesplegable____________________________________________-->
+		<div id="Clientes">
+	  					<div id="Modal_int">
+	    					<div id="Contenido">
+	    						<h2 id="Titulo_RA">Clientes</h2>
+	    						
+	    						<table id="TablaClientes">
+	    							<tr>
+	    								<td ><h3><input type="radio" name="group1" value="Por Vendedor">Por Vendedor</h3></td>
+	    								<td ><h3><input type="radio" name="group1" value="Por Vendedor">Por Cliente</h3></td>
+	    							</tr>
+	       						</table>
+	    						
+	    					</div>
+	  					</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+
+			<div id="MenuControl">
+				<div id="Lista">
+					<LI type="none">Menu</LI>
+					<LI id="ListAdministrador" type="none" >Administrador</LI>
+					<LI type="none" id="ListVendedor" >Vendedores</LI>
+					<LI type="none" id="ListClientes" >Clientes</LI>
+					<LI type="none" id="ListProductos" >Productos</LI>
+					<LI type="none" id="ListReportes" >Reportes</LI>
+					<LI id="Salir" type="none">Salir </LI>
+					<LI type="none">Cerrar Secion </LI>
+				</div>
+			</div>
+	
+</html>
+

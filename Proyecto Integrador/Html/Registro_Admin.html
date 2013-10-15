@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>Registro de Administrador</title>
+		<link href="../Css/Registro_Admin.css" rel="stylesheet" />
+		<meta charset="utf8">
+		<script type="text/javascript" src="../Script/ScriptAdministrador.js">
+		</script>
+	</head>
+
+	<body>
+			<header id="HeaderRegistroAdmin">
+				<h1>Registro de Administrador</h1>
+			</header>
+		<div id="Principal">
+			<div id="Izquierdo">
+		<form action="Registro_Administrador.php" method="psot">
+				<table id="Tabla1">
+					<tr>
+						<td>Nombre</td>
+						<td><input type="text" name="APNombre"   placeholder="Nombre" >*</td>
+					</tr>
+
+					<tr>
+						<td>Usuario</td>
+						<td><input type="text" name="APUsuario" placeholder="Usuario">*</td>
+					</tr>
+
+					<tr>
+						<td>Contraseña</td>
+						<td><input type="password" name="TxtContraseña1" id="TxtContraseña1" placeholder="Contraseña">*</td>
+					</tr>
+
+					<tr>
+						<td>Confirmar </td>
+						<td><input type="password" name="TxtContraseña2" id="TxtContraseña2" placeholder="Confirmar" onblur ="Validar();">*</td>
+					</tr>
+
+					<tr>
+						<td>E-mail</td>
+						<td><input type="text"   placeholder="Pepe1234@hotmail.com">*</td>
+					</tr>
+
+					<tr>
+						<td>Facebook</td>
+						<td><input type="text"  placeholder="/Ejemplo"></td>
+					</tr>
+
+					<tr>
+						<td>Twitter</td>
+						<td><input type="text"  placeholder="/Ejemplo"></td>
+					</tr>
+
+				</table>
+			</div>
+
+			<div id="Derecho">
+				<table id="Tabla2">
+						<tr>
+							<td>Foto de perfil</td>
+						</tr>
+						
+						<tr>
+							<td>
+								<img class="Fotografia" src="../Imagenes/Default.png">
+							</td>
+						</tr>
+						<tr>
+							<input type="Submit" value="Enviar">
+						</tr>
+				</table>
+	</form>
+				
+			</div>
+		</div>
+
+
+	</body>
+</html>

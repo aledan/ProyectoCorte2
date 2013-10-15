@@ -1,0 +1,682 @@
+body
+{
+	 background-image: url(../Imagenes/Cuerpo.png);
+	 margin: 0;
+}
+
+button
+{
+	background:-moz-linear-gradient(#200000   0%,#500000   100%); 
+	background:-ms-linear-gradient(#200000   0%,#500000   100%);
+	background:-o-linear-gradient(#200000   0%,#500000   100%); 
+	background:-webkit-linear-gradient(#200000   0%,#500000   100%);
+	background:linear-gradient(#200000   0%,#500000   100%);
+	border:solid 1px #DEDEDE; 
+	border-radius:5px;
+	text-align:center;
+	padding:5px; 
+	color:#fff;
+  	width:75px;
+  	cursor: pointer;
+}
+
+input
+{
+	padding: 7px;	
+	border-bottom: 3px solid white;
+	border-right: 3px solid white;
+	border-top: 1px solid white;
+	border-left: 1px solid white;
+	background-color: transparent;
+	color: white;
+	border-radius:15px;
+}
+
+li
+{
+	list-style-type: none;
+	background:-moz-linear-gradient(#200000   0%,#500000   100%); 
+	background:-ms-linear-gradient(#200000   0%,#500000   100%);
+	background:-o-linear-gradient(#200000   0%,#500000   100%); 
+	background:-webkit-linear-gradient(#200000   0%,#500000   100%);
+	background:linear-gradient(#200000   0%,#500000   100%);
+	border-radius:5px;
+	text-align:center;
+	padding:5px; 
+	color:#fff;
+}
+
+
+#Tabla_abc
+{
+	margin-left: 13cm; 
+	font-family: calibri,sans-serif,helvetica;
+	font-size: 9pt;
+}
+
+#HeaderRegistroAdmin
+{
+	background:-moz-linear-gradient(#200000   0%,#500000   100%); 
+	background:-ms-linear-gradient(#200000   0%,#500000   100%);
+	background:-o-linear-gradient(#200000   0%,#500000   100%); 
+	background:-webkit-linear-gradient(#200000   0%,#500000   100%);
+	background:linear-gradient(#200000   0%,#500000   100%);
+
+	width: 1000px;
+	background-color: #880015;
+	text-align: center;
+	border-radius: 50px; 
+	color: white;
+   	-moz-border-radius:50px; /* Firefox */ 
+    -webkit-border-radius:50px; /* Safari y Chrome */ 
+    margin-left: 10%;
+    font-family: calibri,sans-serif,helvetica;
+    position: static;
+}
+#HeaderPanelControl
+{
+	background:-moz-linear-gradient(#200000   0%,#500000   100%); 
+	background:-ms-linear-gradient(#200000   0%,#500000   100%);
+	background:-o-linear-gradient(#200000   0%,#500000   100%); 
+	background:-webkit-linear-gradient(#200000   0%,#500000   100%);
+	background:linear-gradient(#200000   0%,#500000   100%);
+
+	width: 1000px;
+	background-color: #880015;
+	text-align: center;
+	border-radius: 50px; 
+	color: white;
+   	-moz-border-radius:50px; /* Firefox */ 
+    -webkit-border-radius:50px; /* Safari y Chrome */ 
+    margin-left: 10%;
+    font-family: calibri,sans-serif,helvetica;
+    position: static
+}
+
+#Principal
+{
+	background-image: url(../Imagenes/DivPrincipal.png);
+	width: 1000px;
+	height: 500px;
+	background-color: black;
+	border-radius:50px; 
+   	-moz-border-radius:50px; /* Firefox */ 
+    -webkit-border-radius:50px; /* Safari y Chrome */ 
+    margin-left: 10%;
+    position: static;
+}
+
+#Izquierdo
+{	
+	float: left;
+	background-color: transparent;
+	width: 500px;
+	height: 500px;
+}
+
+#Derecho
+{
+	float: left;
+	background-color: transparent;
+	width: 500px;
+	height: 500px;
+}	
+
+#Tabla1
+{
+	font-family: calibri,sans-serif,helvetica;
+	color: white;
+	font-size: 20pt;
+	margin-right: auto;
+	position: absolute;
+	border-spacing: 20px;
+}
+
+#Tabla2
+{
+	font-family: calibri,sans-serif,helvetica;	
+	font-size: 18pt;
+	margin-left: 2cm;
+	margin-top: 30px;
+	color:white	;
+}
+
+#BotonExaminar
+{
+	float: left;
+	cursor: pointer;
+}
+
+#BotonGuardar
+{
+	float: left;
+	cursor: : pointer;
+}
+#Tabla3
+{
+	margin-left: 25%;
+	border-spacing: 20px;
+}
+
+#Botonenviar
+{
+	float: left;
+	margin-left: 25px;
+	margin-top: 15px;
+	cursor: : pointer;
+}
+
+#Botoncancelar
+{
+	float: left;
+	margin-left: 25px;
+	margin-top: 15px;
+	cursor: : pointer;
+}
+
+
+#PrincipalControl
+{
+
+	background-image: url(../Imagenes/DivPrincipal.png);
+	width: 800px;
+	height: 500px;
+	border-radius:50px; 
+   	-moz-border-radius:50px; /* Firefox */ 
+    -webkit-border-radius:50px; /* Safari y Chrome */ 
+    margin-left: 10%;
+    position: static;
+    display: inline-block;
+}
+
+#MenuControl
+{
+	width: 190px;
+	height: 500px;
+	background-image: url(../Imagenes/DivPrincipal.png);
+	display: inline-block;
+	border-radius:50px; 
+   	-moz-border-radius:50px; /* Firefox */ 
+    -webkit-border-radius:50px; /* Safari y Chrome */ 
+    position: absolute;
+    margin-left: 10px;
+}
+
+#Lista
+{
+	margin-top: 1cm;
+}
+#Salir
+{
+	margin-top: 4cm;
+}
+
+#TablaLog
+{
+	color: white;
+	margin-top: 0;
+	position: absolute;
+	font-family: calibri,sans-serif,helvetica;
+	font-size: 18pt;
+	margin-left: 20px;
+}
+
+#Administrador
+ {
+ 	width: 100px;
+ 	height: 100px;
+    position: absolute;
+    display: none;
+
+ }
+  
+#Modal_int 
+{
+    position: relative;
+}
+
+#Columnas
+{
+	margin-left: 5cm;
+	border-spacing: 5cm;
+}
+#ContVendedor
+{
+	display: none;
+}
+
+#ContVendedorEliminar
+{
+	display: none;
+}
+
+#Contenido 
+{
+   background-image: url(../Imagenes/Header.jpg);
+   background-image: 
+   margin-left: ;
+   box-shadow: 8px 8px 20px white;
+   background-color:#FFF; 
+   margin-right: 100px;
+   margin-left: 100px;
+   margin-top: 50px;
+   margin-bottom: 50px;
+   border-radius:5px;
+   height:400px; 
+   width:600px; 
+}
+
+#Titulo_RA
+{
+	-moz-border-radius:5px; /* Firefox */ 
+    -webkit-border-radius:5px; /* Safari y Chrome */ 
+	background-color: white;
+	font-family: calibri,sans-serif,helvetica;
+	text-align: center;
+}
+
+.Img_boton
+{
+	width: 25px;
+	height: 25px;
+	box-shadow: 3px 3px 3px black;	
+}
+
+#Fondo_Modal
+{
+	background: rgba(0,0, 0, 0.7);
+	width: 100%;
+	height:100%;
+	display: none;
+	left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+#Clientes
+{
+	display: none;
+}
+
+#Contenido_Modal
+{
+	background: #151212;
+	margin:0px auto;
+    margin-top:50px;
+    padding:10px;
+    width:500px;
+    height:500px;
+    border-radius:4px;
+    box-shadow: 0 5px 20px white;
+}
+
+#TablaClientes
+{
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+#Cerrar
+{
+    left:480px;
+    margin-left: 13cm;
+    margin-top: -1cm;
+}
+
+#img_Cerrar
+{
+	display: inherit;
+	float: right;
+	width: 50px;
+	height: 50px;
+	margin: 0;
+	position: absolute;
+}
+#Tabla_Formulario
+{
+	position: absolute;
+	/*position: absolute;
+	background: green;
+	border-collapse:separate;
+	margin-top: 1cm;
+	margin-left:10px;
+	border-spacing:1cm 0px;*/ 
+}
+
+#FormularioFoto
+{
+	margin-left: 5cm;
+	border-spacing: 0px;
+}
+
+#FotoVendedor
+{
+	margin-left: 5cm;
+}
+
+#ContAdministradorBaja
+{
+	display: none;
+}
+
+#Mod_Contenido
+{
+	margin-top: 1cm;
+	display: inherit;
+}
+
+
+#ComboSexo
+{
+	padding: 7px;	
+	border-bottom: 3px solid white;
+	border-right: 3px solid white;
+	border-top: 1px solid white;
+	border-left: 1px solid white;
+	background-color: transparent;
+	color: white;
+	border-radius:15px;	
+}
+
+#Vendedores
+{
+	width: 100px;
+ 	height: 100px;
+    position: absolute;
+    display: none;	
+}
+#ImagenEliminarVendedores
+{
+	margin-left: 1cm;
+	position: absolute;
+}
+
+#ContAdministradorCambio
+{
+	display: none;
+}
+
+.InputReal
+{
+	z-index: 0;
+	opacity: 0;
+	width: 75px;
+	position: absolute;
+}
+
+.BotonSimulado
+{
+	z-index: 1;
+}
+.Titulos_Mod
+{
+	color: white;
+	margin-top: 1cm;	
+	margin-left:2cm;
+}
+
+.Botones:hover
+{
+	box-shadow: 8px 8px 20px white;
+	cursor: : pointer;
+}
+
+.Botones:active
+{
+	box-shadow: 8px 8px 60px white;	
+}
+
+.Img_boton:hover
+{
+	box-shadow: 3px 3px 3px white;
+}
+
+.Img_boton:active
+{
+	box-shadow: 3px 3px 6px white;
+}
+
+.Labels
+{
+	color: white;
+	font-size: 12pt;
+}
+
+.BotonSearch
+{
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+}
+
+.CajasT
+{
+	width: 60px;
+	height: 20px;
+}
+
+.Botones
+{
+	width: 60px;
+	height: 60px;
+	border-radius:5px;
+	box-shadow: 8px 8px 20px black;
+	cursor: pointer;
+}
+
+.Fotografia
+{
+	width: 250px;
+	height: 250px;
+	margin-left: 1cm;
+}
+
+.TablasFormulario
+{
+	margin-left: 
+}
+
+/* LO MIO QUE HICE DE INSTALACION CSS ----------------> */
+
+#titulo
+{
+	color:white;
+	font-family: calibri,sans-serif,helvetica;
+	text-align: center;
+}
+
+#Izq
+{	
+	float: left;
+	background-color: transparent;
+	width: 100px;
+	height: 500px;
+}
+
+#Der
+{
+	float: right;
+	background-color: transparent;
+	width: 500px;
+	height: 300px;
+}
+
+#contenido
+{
+	background-image: url(../Imagenes/DivPrincipal.png);
+	width: 900px;
+	height: 550px;
+	background-color: black;
+	border-radius:50px; 
+   	-moz-border-radius:50px; /* Firefox */ 
+    -webkit-border-radius:50px; /* Safari y Chrome */ 
+    /*margin-left: 10%;*/
+    margin: 0 auto;
+    position: static;
+}
+
+#Tabla_registro
+{
+	font-family: calibri,sans-serif,helvetica;
+	color: white;
+	font-size: 20pt;
+	margin-left: 80px;
+	position: absolute;
+	border-spacing: 6px;
+	margin-top: 12px;
+}
+
+#Tabla_foto
+{
+	font-family: calibri,sans-serif,helvetica;	
+	font-size: 18pt;
+	margin-left: 2cm;
+	margin-top: 10px;
+	color:white;
+}
+
+#Tabla_Botones
+{
+	margin-left: 90px;
+	border-spacing: 10px;
+}
+
+#TomarCamara
+{
+	float: left;
+	cursor: pointer;
+}
+
+#contenido2
+{
+	background-image: url(../Imagenes/DivPrincipal.png);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+    width: 280px;
+    height: 300px;
+    margin-top: -180px;
+    margin-left: -150px;
+ 	background-color: #FFFFFF;
+    overflow: auto;
+    border-radius:50px; 
+   	-moz-border-radius:50px; /* Firefox */ 
+    -webkit-border-radius:50px; /* Safari y Chrome */ 
+}
+
+#tabla2
+{
+	color: #FFFFFF;
+	margin-top: 30;
+	position: absolute;
+	font-family: calibri,sans-serif,helvetica;
+	font-size: 18pt;
+	margin-left: 80px;
+}
+
+#div_clave
+{
+	background-image: url(../Imagenes/intclave.png);
+	width: 550px;
+	height: 300px;
+	background-color: white;
+	border-radius: 10px; 
+   	-moz-border-radius:50px; /* Firefox */ 
+    -webkit-border-radius:50px; /* Safari y Chrome */ 
+    /*margin-left: 10%;*/
+    margin: 0 auto;
+    margin-top: 90px;
+    position: static;
+}
+
+#Tabla_clave
+{
+	color: black;
+	margin-top: 130px;
+	position: absolute;
+	font-family: helvetica,calibri,sans-serif;
+	font-size: 18pt;
+	margin-left: 80px;
+	width: 190px;
+}
+
+.ingresaClave
+{
+	width:300px;
+	border-bottom: 3px solid white;
+	border-right: 3px solid white;
+	border-top: 1px solid white;
+	border-left: 1px solid white;
+	background-color: gray;
+	color: black;
+	border-radius:5px;
+}
+
+/*---------------------->*/
+
+
+input:hover
+{
+	box-shadow: 8px 8px 20px red;
+}
+
+
+button:hover
+{
+	background:-moz-linear-gradient(#600000  0%,#A00000  100%); 
+	background:-ms-linear-gradient(#600000  0%,#A00000  100%);
+	background:-o-linear-gradient(#600000  0%,#A00000  100%); 
+	background:-webkit-linear-gradient(#600000  0%,#A00000  100%);
+	background:linear-gradient(#600000  0%,#A00000  100%);
+	border:solid 1px #DEDEDE; 
+	border-radius:5px;
+	text-align:center;
+	
+}
+
+button:active
+{
+	background:-moz-linear-gradient(#B00000   0%,#FF0000   100%); 
+	background:-ms-linear-gradient(#B00000   0%,#FF0000   100%);
+	background:-o-linear-gradient(#B00000   0%,#FF0000   100%); 
+	background:-webkit-linear-gradient(#B00000   0%,#FF0000   100%);
+	background:linear-gradient(#B00000   0%,#FF0000   100%);
+	border:solid 1px #DEDEDE; 
+	border-radius:5px;
+	text-align:center;
+	padding:5px; 
+  	width:75px;
+
+}
+
+li:hover
+{
+	background:-moz-linear-gradient(#600000  0%,#A00000  100%); 
+	background:-ms-linear-gradient(#600000  0%,#A00000  100%);
+	background:-o-linear-gradient(#600000  0%,#A00000  100%); 
+	background:-webkit-linear-gradient(#600000  0%,#A00000  100%);
+	background:linear-gradient(#600000  0%,#A00000  100%);
+	border:solid 1px #DEDEDE; 
+	border:solid 1px #DEDEDE; 
+	border-radius:5px;
+	text-align:center;
+	padding:5px; 
+	color:#fff;
+}
+
+li:active
+{
+	background:-moz-linear-gradient(#B00000   0%,#FF0000   100%); 
+	background:-ms-linear-gradient(#B00000   0%,#FF0000   100%);
+	background:-o-linear-gradient(#B00000   0%,#FF0000   100%); 
+	background:-webkit-linear-gradient(#B00000   0%,#FF0000   100%);
+	background:linear-gradient(#B00000   0%,#FF0000   100%);
+	border:solid 1px #DEDEDE; 
+	border:solid 1px #DEDEDE; 
+	border-radius:5px;
+	text-align:center;
+	padding:5px; 
+	color:#fff;
+}
